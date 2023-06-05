@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title class="titulo">Decodificador de Texto</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<header> 
+<img class="imagem-alura" src="./image.png" alt="alura">
+
+</header>
+<body>
+  <h1>Decodificador de Texto</h1>
+  
+  <label for="inputText"></label>
+  <textarea id="inputText" rows="10" cols="50" placeholder="INSIRA SEU TEXTO PARA SER CODIFICADO."></textarea>
+  
+  <button class="decodificar" onclick="decodeText()">Decodificar</button>
+  <button class="codificar"onclick="encodeText()">Codificar</button>
+  
+  <label for="outputText">Resultado:</label>
+  <textarea id="outputText" rows="10" cols="50" readonly placeholder="AQUI SAIRÁ SEU TEXTO CODIFICADO."></textarea>
+  
+  <script>
+    function decodeText() {
+      const inputText = document.getElementById('inputText').value;
+      let decodedText = '';
+      for (let i = 0; i < inputText.length; i++) {
+        const charCode = inputText.charCodeAt(i);
+        const decodedCharCode = charCode - 1;
+        decodedText += String.fromCharCode(decodedCharCode);
+      }
+      document.getElementById('outputText').value = decodedText;
+    }
+    
+    function encodeText() {
+      const inputText = document.getElementById('inputText').value;
+      let encodedText = '';
+      for (let i = 0; i < inputText.length; i++) {
+        const charCode = inputText.charCodeAt(i);
+        const encodedCharCode = charCode + 1;
+        encodedText += String.fromCharCode(encodedCharCode);
+      }
+      document.getElementById('outputText').value = encodedText;
+    }
+
+    
+  </script>
+  <footer> <img src="./PENSATIVO.png" alt="" class="pensativo"> </footer>
+</body>
+</html>

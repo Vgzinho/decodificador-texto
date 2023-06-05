@@ -1,0 +1,33 @@
+
+
+
+*{
+
+    font-family: "Poppins","sans-serif";
+    background-color: antiquewhite;
+ 
+}
+.titulo{
+
+background-color: blue;
+
+}
+.codificar,.decodificar{
+
+
+    background:linear-gradient(blue,white)
+}
+
+.imagem-alura{
+
+    height: 100px;
+}
+.pensativo{
+    
+    margin: 20px 430px;
+
+    width: 20%;
+    
+    border-radius: 10px;
+    
+}
